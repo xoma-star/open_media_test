@@ -141,6 +141,7 @@ form .input-wrapper > svg {
     width: 100%;
     padding: 32px 16px;
     height: auto;
+    box-sizing: border-box;
 }
 .section-main > .form-side .submit {
     cursor: pointer;
@@ -404,6 +405,21 @@ form .input-wrapper > svg {
         order: 1;
         width: 100%;
     }
+    form .input-wrapper {
+        display: flex;
+        flex-direction: row;
+        height: 64px;
+        padding: 0;
+        box-sizing: content-box;
+        width: 100%;
+        background-color: #fff;
+        align-items: center;
+    }
+    form .input-wrapper > svg {
+        flex-shrink: 0;
+        margin-right: 16px;
+    }
+
     .section-main > .form-side .url-input {
         height: 64px;
     }
