@@ -9,6 +9,11 @@ const App = () => {
     const [volume, setVolume] = useState(100)
     const [loading, setLoading] = useState(false)
 
+    // я торопился, поэтому тут не так хорошо, как я смог бы
+    // вот что бы я сделал: вынес все svg в отдельные файлы
+    // разбил форму с урл и управление аудио по разным компонентам
+    // порефакторил код (напр. переменная displayTime, onChange в слайдере времени и т.д.)
+
     const audioRef = useRef<HTMLAudioElement>(null)
 
     const timePercents = Number((currentTime / (audioRef.current?.duration || 1) * 100).toFixed(2))
@@ -39,7 +44,7 @@ const App = () => {
 
     const audioErrorHandler = (e: React.SyntheticEvent<HTMLAudioElement>) => {
         setSubmitted(false)
-        setError(e.target.error.message || "Unknown error")
+        setError((e.target as HTMLAudioElement).error?.message || "Unknown error")
     }
 
     return (
