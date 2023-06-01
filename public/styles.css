@@ -182,6 +182,7 @@ form .input-wrapper > svg {
     font-weight: 300;
     font-size: 12px;
     line-height: 16px;
+    margin: 8px 0;
 
     letter-spacing: -0.3px;
 
@@ -392,7 +393,7 @@ form .input-wrapper > svg {
     .section-main {
         border: none;
         height: auto;
-        padding: 12px 20px;
+        padding: 20px 12px;
         gap: 40px;
     }
     .section-main h1 {
